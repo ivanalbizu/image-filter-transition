@@ -70,20 +70,6 @@ html {
   margin-left: auto;
 }
 
-@-webkit-keyframes cp-bottom-right {
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-}
-
-@keyframes cp-bottom-right {
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-}
-
 @-webkit-keyframes image-current {
   from {
     -webkit-filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));

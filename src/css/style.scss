@@ -57,11 +57,6 @@ $color-3: #53777A;
   }
 }
 
-@keyframes cp-bottom-right {
-  to {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%); //se ve completo
-  }
-}
 @keyframes image-current {
   from {
     filter: blur(0) drop-shadow(0px 20px 30px rgba(0,0,0,.9));
