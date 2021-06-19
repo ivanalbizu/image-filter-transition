@@ -6,23 +6,6 @@
   }
 }
 
-
-* {
-  scrollbar-color: #555 #f1f1f1;
-  scrollbar-width: thin;
-}
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 h1, h2, h3, h4, h5, h6, p {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -124,6 +107,7 @@ $color-3: #53777A;
     "left right";
   height: 100vh;
   background: linear-gradient(to right, $color-3 50%, $color-1 50%);
+  overflow: hidden;
   &__nav {
     grid-area: nav;
     padding: 10px 15px;

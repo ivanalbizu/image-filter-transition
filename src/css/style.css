@@ -8,27 +8,6 @@
           box-sizing: border-box;
 }
 
-* {
-  scrollbar-color: #555 #f1f1f1;
-  scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 h1, h2, h3, h4, h5, h6, p {
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -188,6 +167,7 @@ html {
   background: -webkit-linear-gradient(left, #53777A 50%, #D95B43 50%);
   background: -o-linear-gradient(left, #53777A 50%, #D95B43 50%);
   background: linear-gradient(to right, #53777A 50%, #D95B43 50%);
+  overflow: hidden;
 }
 
 .grid__nav {
