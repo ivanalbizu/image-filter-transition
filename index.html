@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Grid</title>
+  <script>document.documentElement.className = 'js';</script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
+  <script src="src/js/script.js" defer></script>
+</head>
+<body>
+  <main class="grid">
+    <nav class="grid__nav nav">
+      <ul class="nav__menu">
+        <li class="nav__menu-item">
+          <a href="#!">Home</a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="#!">About</a>
+        </li>
+        <li class="nav__menu-item">
+          <a href="#!">Contact</a>
+        </li>
+      </ul>
+      <div class="nav__logo">
+        The Boring Company
+      </div>
+      <div class="nav__cart">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="24" height="24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path d="M18 17a7 7 0 1 0-7-7a7 7 0 0 0 7 7zm0-12a5 5 0 1 1-5 5a5 5 0 0 1 5-5z" class="clr-i-outline clr-i-outline-path-1" fill="#ffffff"/><path d="M30.47 24.37a17.16 17.16 0 0 0-24.93 0A2 2 0 0 0 5 25.74V31a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2v-5.26a2 2 0 0 0-.53-1.37zM29 31H7v-5.27a15.17 15.17 0 0 1 22 0z" class="clr-i-outline clr-i-outline-path-2" fill="#ffffff"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="24" height="24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path class="clr-i-outline clr-i-outline-path-1" d="M25 12V9.05a7 7 0 1 0-14 0v7a1 1 0 0 0 2 0V14h8v-2h-8V9.05a5 5 0 1 1 10 0V16a1 1 0 1 0 2 0v-2h5v18H6V14h3v-2H4v20.09A1.91 1.91 0 0 0 5.91 34h24.18A1.91 1.91 0 0 0 32 32.09V12z" fill="#ffffff"/></svg>
+      </div>
+    </nav>
+    <div class="grid__left">
+      <div class="pagination">
+        <ul>
+          <li class="bullet bullet--active">1</li>
+          <li class="bullet">2</li>
+          <li class="bullet">3</li>
+        </ul>
+      </div>
+      <div class="content content--1 content--active">
+        <img src="src/img/wine-01.png" alt="">
+      </div>
+      <div class="content content--2">
+        <img src="src/img/wine-02.png" alt="">
+      </div>
+      <div class="content content--3">
+        <img src="src/img/wine-03.png" alt="">
+      </div>
+    </div>
+    <div class="grid__right">
+      <h2 class="title-band">Portishead</h2>
+      <div class="details">
+        <h3 class="details__album">
+          <span>Album</span>
+          <span>Dummy</span>
+        </h3>
+        <p class="details__year">
+          <span>Year</span>
+          <span>1997</span>
+        </p>
+        <p class="details__discography">
+          <span>Discography</span>
+          <span>Go Beat</span>
+        </p>
+        <ol class="details__track">
+          <li>Mysterons – 5:06</li>
+          <li>Sour Times – 4:14</li>
+          <li>Strangers – 3:58</li>
+          <li>It Could Be Sweet – 4:20</li>
+          <li>Wandering Star – 4:56</li>
+          <li>It's a Fire – 3:48</li>
+          <li>Numb – 3:58</li>
+          <li>Roads – 5:10</li>
+          <li>Pedestal – 3:41</li>
+          <li>Biscuit – 5:04</li>
+          <li>Glory Box – 5:06</li>
+        </ol>
+      </div>
+      <p>Dummy fue el álbum debut de la banda de trip hop Portishead, considerado clave dentro de este estilo musical, junto con otras bandas como Massive Attack o Tricky. Este nuevo género musical se conocería también como Bristol sound, debido a que la mayor influencia partía de grupos y sellos discográficos de la localidad inglesa de Bristol.</p>
+    </div>
+  </main>
+</body>
+</html>

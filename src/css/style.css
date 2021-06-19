@@ -1,0 +1,415 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *::after, * *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --width-content: 620px;
+  --padding-content: clamp(20px, 3vw, 40px);
+}
+
+* {
+  scrollbar-color: #555 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  font-weight: 400;
+}
+
+ul, ol {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+html {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__menu {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0 10px;
+  margin-right: auto;
+}
+
+.nav__menu-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__logo {
+  font-size: 26px;
+}
+
+.nav__cart {
+  margin-left: auto;
+}
+
+@-webkit-keyframes cp-bottom-right {
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes cp-bottom-right {
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@-webkit-keyframes image-current {
+  from {
+    -webkit-filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+            filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+            filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes image-current {
+  from {
+    -webkit-filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+            filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+            filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes image-next {
+  from {
+    -webkit-filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+            filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+            filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes image-next {
+  from {
+    -webkit-filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+            filter: blur(60px) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0));
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+            filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.animating .content--active img {
+  -webkit-animation: image-current .35s linear 0s forwards;
+          animation: image-current .35s linear 0s forwards;
+}
+
+.animating .content--next img {
+  -webkit-animation: image-next .35s linear .35s;
+          animation: image-next .35s linear .35s;
+}
+
+.grid {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: -webkit-min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  gap: 0px;
+  grid-template-areas: "nav nav" "left right";
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #53777A), color-stop(50%, #D95B43));
+  background: -webkit-linear-gradient(left, #53777A 50%, #D95B43 50%);
+  background: -o-linear-gradient(left, #53777A 50%, #D95B43 50%);
+  background: linear-gradient(to right, #53777A 50%, #D95B43 50%);
+}
+
+.grid__nav {
+  grid-area: nav;
+  padding: 10px 15px;
+}
+
+.grid__left {
+  grid-area: left;
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr) 60px;
+  grid-template-rows: 1fr 13vw;
+  gap: 0;
+  height: 100%;
+}
+
+.grid__left::before {
+  display: block;
+  grid-area: 1 / 1 / 2 / 5;
+  background-color: #C02942;
+}
+
+.grid__left .content {
+  grid-area: 1 / 1 / 3 / 5;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 60px repeat(2, 1fr) 60px;
+  grid-template-rows: 1fr 13vw;
+  padding-top: 30px;
+  -webkit-transition: -webkit-clip-path .7s ease-in-out;
+  transition: -webkit-clip-path .7s ease-in-out;
+  -o-transition: clip-path .7s ease-in-out;
+  transition: clip-path .7s ease-in-out;
+  transition: clip-path .7s ease-in-out, -webkit-clip-path .7s ease-in-out;
+}
+
+.grid__left .content img {
+  z-index: 5;
+  grid-area: 1 / 1 / 3 / 5;
+  justify-self: center;
+  max-height: calc(100vh - 120px);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.grid__left .content::before, .grid__left .content::after {
+  content: '';
+  display: block;
+}
+
+.grid__left .content::before {
+  grid-area: 2 / 1 / 3 / 3;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-transition: -webkit-clip-path .5s ease-in-out .2s;
+  transition: -webkit-clip-path .5s ease-in-out .2s;
+  -o-transition: clip-path .5s ease-in-out .2s;
+  transition: clip-path .5s ease-in-out .2s;
+  transition: clip-path .5s ease-in-out .2s, -webkit-clip-path .5s ease-in-out .2s;
+}
+
+.grid__left .content::after {
+  grid-area: 2 / 3 / 3 / 5;
+  -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+  -webkit-transition: -webkit-clip-path .7s ease-in-out;
+  transition: -webkit-clip-path .7s ease-in-out;
+  -o-transition: clip-path .7s ease-in-out;
+  transition: clip-path .7s ease-in-out;
+  transition: clip-path .7s ease-in-out, -webkit-clip-path .7s ease-in-out;
+}
+
+.grid__left .content--active {
+  z-index: 2;
+}
+
+.grid__left .content--active img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+          filter: blur(0) drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9));
+}
+
+.grid__left .content--active::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.grid__left .content--active::after {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.grid__left .content--next {
+  z-index: 3;
+}
+
+.grid__left .content--next::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.grid__left .content--next::after {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-transition: -webkit-clip-path .7s ease-in-out;
+  transition: -webkit-clip-path .7s ease-in-out;
+  -o-transition: clip-path .7s ease-in-out;
+  transition: clip-path .7s ease-in-out;
+  transition: clip-path .7s ease-in-out, -webkit-clip-path .7s ease-in-out;
+}
+
+.grid__left .content--1::before {
+  background-color: #843577;
+}
+
+.grid__left .content--1::after {
+  background-color: #53607A;
+}
+
+.grid__left .content--2::before {
+  background-color: #357C97;
+}
+
+.grid__left .content--2::after {
+  background-color: #F9DA4D;
+}
+
+.grid__left .content--3::before {
+  background-color: #4D9B58;
+}
+
+.grid__left .content--3::after {
+  background-color: #F27F30;
+}
+
+.grid__left .pagination {
+  grid-area: 1 / 1 / 3 / 2;
+  place-self: center;
+}
+
+.grid__right {
+  grid-area: right;
+  padding: 60px 50px 20px;
+}
+
+.pagination li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  -webkit-transition: color .3s linear, background .3s linear;
+  -o-transition: color .3s linear, background .3s linear;
+  transition: color .3s linear, background .3s linear;
+}
+
+.pagination li:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.pagination li.bullet--active {
+  background-color: #fff;
+  color: #53777A;
+  -webkit-transition: color .3s linear, background .3s linear;
+  -o-transition: color .3s linear, background .3s linear;
+  transition: color .3s linear, background .3s linear;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 10px 20px;
+  grid-template-areas: "album track" "year track" "discography track";
+  margin-bottom: 2rem;
+}
+
+.details__album {
+  grid-area: album;
+}
+
+.details__year {
+  grid-area: year;
+}
+
+.details__discography {
+  grid-area: discography;
+}
+
+.details__track {
+  grid-area: track;
+  justify-self: end;
+  text-align: right;
+}
+
+.details__album span, .details__year span, .details__discography span {
+  display: block;
+  text-align: right;
+}
+
+.title-band {
+  text-align: right;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+  margin-bottom: 1rem;
+}
