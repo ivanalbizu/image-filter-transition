@@ -8,15 +8,6 @@
           box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-:root {
-  --width-content: 620px;
-  --padding-content: clamp(20px, 3vw, 40px);
-}
-
 * {
   scrollbar-color: #555 #f1f1f1;
   scrollbar-width: thin;
@@ -211,12 +202,6 @@ html {
   grid-template-rows: 1fr 13vw;
   gap: 0;
   height: 100%;
-}
-
-.grid__left::before {
-  display: block;
-  grid-area: 1 / 1 / 2 / 5;
-  background-color: #C02942;
 }
 
 .grid__left .content {
